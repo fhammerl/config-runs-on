@@ -22,7 +22,7 @@ on:
 
 jobs:
   print-username:
-    runs-on: ${{ inputs.runon }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Print the input name to STDOUT
