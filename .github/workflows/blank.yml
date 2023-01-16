@@ -13,10 +13,15 @@ on:
         default: 'john-doe'
         required: false
         type: string
+      runon:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 
 jobs:
   print-username:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runon }}
 
     steps:
       - name: Print the input name to STDOUT
